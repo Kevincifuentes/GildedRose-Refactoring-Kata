@@ -5,16 +5,19 @@ public class TexttestFixture {
         System.out.println("OMGHAI!");
 
         Item[] items = new Item[] {
-                new Item("+5 Dexterity Vest", 10, 20), //
-                new Item("Aged Brie", 2, 0), //
-                new Item("Elixir of the Mongoose", 5, 7), //
-                new Item("Sulfuras, Hand of Ragnaros", 0, 80), //
-                new Item("Sulfuras, Hand of Ragnaros", -1, 80),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+                new Item(Name.of("+5 Dexterity Vest"), SellIn.of(10), Quality.of(20)), //
+                new AgedBrie(SellIn.of(2), Quality.of(0)), //
+                new Item(Name.of("Elixir of the Mongoose"), SellIn.of(5), Quality.of(7)), //
+                new Sulfuras(), //
+                new Sulfuras(),
+                new BackstagePasses(Name.of("Backstage passes to a TAFKAL80ETC concert"), SellIn.of(15), Quality.of(20)),
+                new BackstagePasses(Name.of("Backstage passes to a TAFKAL80ETC concert"), SellIn.of(10), Quality.of(49)),
+                new BackstagePasses(Name.of("Backstage passes to a TAFKAL80ETC concert"), SellIn.of(10), Quality.of(40)),
+                new BackstagePasses(Name.of("Backstage passes to a TAFKAL80ETC concert"), SellIn.of(5), Quality.of(40)),
+                new BackstagePasses(Name.of("Backstage passes to a TAFKAL80ETC concert"), SellIn.of(5), Quality.of(49)),
+                new BackstagePasses(Name.of("Backstage passes to a TAFKAL80ETC concert"), SellIn.of(0), Quality.of(49)),
                 // this conjured item does not work properly yet
-                new Item("Conjured Mana Cake", 3, 6) };
+                new Conjured(Name.of("Conjured Mana Cake"), SellIn.of(3), Quality.of(6)) };
 
         GildedRose app = new GildedRose(items);
 
